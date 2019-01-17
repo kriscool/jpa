@@ -10,9 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="person",schema = "public")
 public class User {
-	
-	//@ManyToMany(mappedBy = "user_id")
-   // private Set<UserRole> userRole = new HashSet<UserRole>();
+	public User(){}
 	
     @ManyToMany(cascade = { CascadeType.REMOVE },fetch = FetchType.EAGER)
     @JoinTable(
@@ -94,17 +92,8 @@ public class User {
 
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "id")
-    private Person_data person_data;
+    private PersonData person_data;
 
-	private int id_person_data;
-
-    public int getId_person_data() {
-		return id_person_data;
-	}
-
-	public void setId_person_data(int id_person_data) {
-		this.id_person_data = id_person_data;
-	}
 
 	public String getLogin() {
 		return login;
@@ -122,11 +111,11 @@ public class User {
 		this.id = id;
 	}
 
-    public Person_data getPerson_data() {
+    public PersonData getPerson_data() {
         return person_data;
     }
 
-    public void setPerson_data(Person_data person_data) {
+    public void setPerson_data(PersonData person_data) {
         this.person_data = person_data;
     }
 

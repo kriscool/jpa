@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="role",schema = "public")
 public class UserRole {
-	
+	public UserRole(){}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;

@@ -4,9 +4,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="person_data",schema = "public")
-public class Person_data {
+public class PersonData {
 
-
+    public PersonData(){}
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

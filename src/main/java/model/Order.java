@@ -9,7 +9,7 @@ import java.util.Set;
 @Table(name="order",schema = "public")
 public class Order {
 
-
+    public Order(){}
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
             name = "car_order",
